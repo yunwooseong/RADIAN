@@ -2,9 +2,20 @@
 
 ### Paper Link
 
+### Requirements
 
-### Radian Implementation
-This repository contains the implementation code for the Radian as proposed in our paper.
+### Datasets
+We used the Baby, Sports and Clothing in our experiments. 
+
+```./datasets``` include download links.
+
+### Run
+Baby
+CUDA_VISIBLE_DEVICES=0 python main.py --dataset baby --model RADIAN
+Sports
+CUDA_VISIBLE_DEVICES=0 python main.py --dataset sports --model RADIAN
+Clothing
+CUDA_VISIBLE_DEVICES=0 python main.py --dataset clothing --model RADIAN
 
 ### Datasets
 We used the Baby, Sports and Clothing in our experiments. 
