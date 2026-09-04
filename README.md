@@ -60,17 +60,107 @@ python main.py --dataset clothing --model RADIAN
 
 Bold marks the best result and underline the second best (Table 2 of the paper).
 
-| Model | Baby<br>Recall@20 | Baby<br>NDCG@20 | Sports<br>Recall@20 | Sports<br>NDCG@20 | Clothing<br>Recall@20 | Clothing<br>NDCG@20 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| MF | 0.0440 | 0.0200 | 0.0430 | 0.0202 | 0.0191 | 0.0088 |
-| NGCF | 0.0591 | 0.0261 | 0.0695 | 0.0318 | 0.0387 | 0.0168 |
-| LightGCN | 0.0698 | 0.0319 | 0.0782 | 0.0369 | 0.0470 | 0.0215 |
-| VBPR | 0.0486 | 0.0213 | 0.0582 | 0.0265 | 0.0481 | 0.0205 |
-| MMGCN | 0.0640 | 0.0284 | 0.0638 | 0.0279 | 0.0501 | 0.0221 |
-| GRCN | 0.0754 | 0.0336 | 0.0833 | 0.0377 | 0.0631 | 0.0276 |
-| LATTICE | <u>0.0829</u> | <u>0.0368</u> | <u>0.0915</u> | <u>0.0424</u> | <u>0.0710</u> | <u>0.0316</u> |
-| **RADIAN** | **0.0917** | **0.0411** | **0.1083** | **0.0500** | **0.0795** | **0.0364** |
-| *Improv.* | *10.62%* | *11.68%* | *18.36%* | *17.92%* | *11.97%* | *15.19%* |
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" align="left">Model</th>
+      <th colspan="2" align="center">Baby</th>
+      <th colspan="2" align="center">Sports</th>
+      <th colspan="2" align="center">Clothing</th>
+    </tr>
+    <tr>
+      <th align="center">Recall@20</th>
+      <th align="center">NDCG@20</th>
+      <th align="center">Recall@20</th>
+      <th align="center">NDCG@20</th>
+      <th align="center">Recall@20</th>
+      <th align="center">NDCG@20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">MF</td>
+      <td align="center">0.0440</td>
+      <td align="center">0.0200</td>
+      <td align="center">0.0430</td>
+      <td align="center">0.0202</td>
+      <td align="center">0.0191</td>
+      <td align="center">0.0088</td>
+    </tr>
+    <tr>
+      <td align="left">NGCF</td>
+      <td align="center">0.0591</td>
+      <td align="center">0.0261</td>
+      <td align="center">0.0695</td>
+      <td align="center">0.0318</td>
+      <td align="center">0.0387</td>
+      <td align="center">0.0168</td>
+    </tr>
+    <tr>
+      <td align="left">LightGCN</td>
+      <td align="center">0.0698</td>
+      <td align="center">0.0319</td>
+      <td align="center">0.0782</td>
+      <td align="center">0.0369</td>
+      <td align="center">0.0470</td>
+      <td align="center">0.0215</td>
+    </tr>
+    <tr>
+      <td align="left">VBPR</td>
+      <td align="center">0.0486</td>
+      <td align="center">0.0213</td>
+      <td align="center">0.0582</td>
+      <td align="center">0.0265</td>
+      <td align="center">0.0481</td>
+      <td align="center">0.0205</td>
+    </tr>
+    <tr>
+      <td align="left">MMGCN</td>
+      <td align="center">0.0640</td>
+      <td align="center">0.0284</td>
+      <td align="center">0.0638</td>
+      <td align="center">0.0279</td>
+      <td align="center">0.0501</td>
+      <td align="center">0.0221</td>
+    </tr>
+    <tr>
+      <td align="left">GRCN</td>
+      <td align="center">0.0754</td>
+      <td align="center">0.0336</td>
+      <td align="center">0.0833</td>
+      <td align="center">0.0377</td>
+      <td align="center">0.0631</td>
+      <td align="center">0.0276</td>
+    </tr>
+    <tr>
+      <td align="left">LATTICE</td>
+      <td align="center"><ins>0.0829</ins></td>
+      <td align="center"><ins>0.0368</ins></td>
+      <td align="center"><ins>0.0915</ins></td>
+      <td align="center"><ins>0.0424</ins></td>
+      <td align="center"><ins>0.0710</ins></td>
+      <td align="center"><ins>0.0316</ins></td>
+    </tr>
+    <tr>
+      <td align="left"><b>RADIAN</b></td>
+      <td align="center"><b>0.0917</b></td>
+      <td align="center"><b>0.0411</b></td>
+      <td align="center"><b>0.1083</b></td>
+      <td align="center"><b>0.0500</b></td>
+      <td align="center"><b>0.0795</b></td>
+      <td align="center"><b>0.0364</b></td>
+    </tr>
+    <tr>
+      <td align="left"><i>Improv.</i></td>
+      <td align="center"><i>10.62%</i></td>
+      <td align="center"><i>11.68%</i></td>
+      <td align="center"><i>18.36%</i></td>
+      <td align="center"><i>17.92%</i></td>
+      <td align="center"><i>11.97%</i></td>
+      <td align="center"><i>15.19%</i></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Citation
 
