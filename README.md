@@ -91,4 +91,4 @@ If you find this work useful, please cite:
 
 This research was supported by the MSIT (Ministry of Science and ICT), Korea, under the ITRC (Information Technology Research Center) support program (IITP-2024-RS-2024-00438056) supervised by the IITP (Institute for Information & Communications Technology Planning & Evaluation); by the National Research Foundation of Korea (NRF) grant funded by the Korea government (MSIT) (No. RS-2024-00419201); and by the IITP grant funded by the Korea government (MSIT) (RS-2021-II211341, Artificial Intelligence Graduate School Program (Chung-Ang University)).
 
-Our implementation builds on [MMRec](https://github.com/enoche/MMRec), [LATTICE](https://github.com/CRIPAC-DIG/LATTICE) and [UltraGCN](https://github.com/reczoo/RecZoo/tree/main/matching/cf/UltraGCN).
+Our implementation builds on [MMRec](https://github.com/enoche/MMRec), [LATTICE](https://github.com/CRIPAC-DIG/LATTICE) and [UltraGCN](https://github.com/reczoo/UltraGCN).
