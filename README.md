@@ -2,7 +2,7 @@
 
 # Relational Alignment Graph Neural Network for Multimodal Recommendation
 
-**[Woo-Seong Yun](https://github.com/yunwooseong)** &nbsp;·&nbsp; **Myung-Bin Gwak** &nbsp;·&nbsp; **Eun-Sun Kim** &nbsp;·&nbsp; **Yoon-Sik Cho**
+**[Woo-Seong Yun](https://scholar.google.com/citations?user=ZRXyvtMAAAAJ)** &nbsp;·&nbsp; **Myung-Bin Gwak** &nbsp;·&nbsp; **Eun-Sun Kim** &nbsp;·&nbsp; **Yoon-Sik Cho**
 
 <sub>Department of Artificial Intelligence, Chung-Ang University</sub>
 
@@ -26,7 +26,7 @@ This is the PyTorch implementation for our RADIAN paper:
 
 ## Overview
 
-Existing multimodal recommenders inject pre-trained image and text features into the item graph as-is, treating them as ground truth about the item. They are not: pre-trained features encode background, brightness and textual noise that have nothing to do with why users interact, and no existing model asks whether the multimodal signal actually agrees with observed behavior. They also model users only through the items they consumed, leaving user-to-user relations implicit. **RADIAN** (Relational Alignment and Denoising for Multimodal Recommendation) takes a different stance: *behavior should supervise modality, not the other way around.* From the interaction matrix alone we derive two homophily graphs, item–item and user–user, using degree-normalized co-occurrence so that popular nodes do not dominate. The item–item graph serves as a behavior-grounded anchor: contrasting its embedding against the multimodal item embedding with InfoNCE pulls the multimodal representation toward what users actually care about and pushes away preference-irrelevant noise. The user–user graph, contrasted against the user ID embedding, makes preferences shared among similar users explicit rather than leaving them buried in item co-consumption. Both graphs are cheap to build, require no extra data, and plug into a standard LightGCN backbone. On Amazon Baby, Sports and Clothing, RADIAN improves over the strongest multimodal baseline by 10.6–18.4% in Recall@20 and 11.7–17.9% in NDCG@20, and the ablation confirms that each graph contributes and that contrastive alignment, not mere feature addition, drives the gain.
+Multimodal recommendation, which exploits image and text features of items, has recently drawn attention as a way to alleviate data sparsity. However, multimodal features are extracted from pre-trained encoders and therefore carry information unrelated to user preference, such as image background, brightness and textual noise. Moreover, existing models represent users only through the items they consumed, leaving user-to-user relations implicit. We propose **RADIAN** (Relational Alignment and Denoising for Multimodal Recommendation). RADIAN constructs two homophily graphs, *user–user* and *item–item*, from the co-occurrence frequency of users and items, and uses them to refine the user and item embeddings. Specifically, the item–item graph aligns the multimodal representation with user preference through contrastive learning against the multimodal graph, while the user–user graph makes hidden preferences shared among users explicit. RADIAN improves over the strongest baseline by 10.62–18.36% on three standard benchmarks.
 
 ## Requirements
 
